@@ -11,7 +11,7 @@ const pool = new Pool({
   connectionString
 });
 
-const Factory = require("./registration");
+const Factory = require("./upcycle");
 const factory = Factory(pool);
 
 let app = express();
@@ -31,7 +31,7 @@ app.use(bodyParser.json())
 
 app.get("/", async function (req, res) {
     res.render('index', {
-     
+    
     });
   });
       
