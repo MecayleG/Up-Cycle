@@ -1,0 +1,27 @@
+{
+  "name": "Up-Cycle",
+  "version": "1.0.0",
+  "description": "Up-Cycle is an app that will inform you on how much you can get for recyclable materials, where you can drop off those materials for cash. It will also have some tips on recycling and how it positively impacts the environment.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AmirahDavids/Up-Cycle.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AmirahDavids/Up-Cycle/issues"
+  },
+  "homepage": "https://github.com/AmirahDavids/Up-Cycle#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.1.0",
+    "mocha": "^8.1.3",
+    "pg": "^8.3.3"
+  }
+}
