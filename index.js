@@ -29,10 +29,17 @@ app.use(bodyParser.json())
 
 app.get("/", async function(req, res) {
     res.render("index")
-})
+});
+app.get("/about", async function(req, res) {
+    res.render("about")
+});
+app.get("/contact", async function(req, res) {
+    res.render("contact")
+});
 
-app.get('/form', async function(req, res) {
-    total: displayTotal
+app.post("/qtyForm", async function(req, res) {
+    // total: displayTotal
+    res.redirect("form")
 });
 app.get("/drop-off-sites", async function(req, res) {
     res.render("map")
