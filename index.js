@@ -30,22 +30,12 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json())
 
 
-<<<<<<< HEAD
 app.get("/", async function(req, res) {
-    res.render('index');
-});
-app.get("/drop-off-sites", async function(req, res) {
-    res.render("map")
-})
-
-=======
-app.get("/", async function (req, res) {
     res.render('index', {
-    
+
     });
-  });
-      
->>>>>>> master
+});
+
 let PORT = process.env.PORT || 4024;
 app.listen(PORT, function() {
     console.log('App starting on port', PORT);
