@@ -11,7 +11,7 @@ const pool = new Pool({
     connectionString
 });
 
-const Factory = require("./upcycle");
+const Factory = require("./registration");
 const factory = Factory(pool);
 
 let app = express();
@@ -22,19 +22,21 @@ app.engine('handlebars', exphbs({
 app.set('view engine', 'handlebars');
 
 app.use(express.static('public'));
-app.use(express.static('images'));
-
 app.use(bodyParser.urlencoded({
     extended: false
 }));
 app.use(bodyParser.json())
 
-
 app.get("/", async function(req, res) {
-    res.render('index', {
+    res.render("index")
+})
 
-    });
+app.get('/form', async function(req, res) {
+    total: displayTotal
 });
+app.get("/drop-off-sites", async function(req, res) {
+    res.render("map")
+})
 
 let PORT = process.env.PORT || 4024;
 app.listen(PORT, function() {
