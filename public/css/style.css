@@ -55,7 +55,7 @@ h1 {
     /* display: flex;
     flex-wrap: wrap; */
     float: left;
-    margin: 1em;
+    margin: 0.5em;
 }
 
 .slides img {

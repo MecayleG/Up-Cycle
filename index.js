@@ -11,7 +11,7 @@ const pool = new Pool({
   connectionString
 });
 
-const Factory = require("./registration");
+const Factory = require("./upcycle");
 const factory = Factory(pool);
 
 let app = express();
@@ -52,6 +52,11 @@ app.post("/qtyForm", async function (req, res) {
 
 app.get("/drop-off-sites", async function (req, res) {
   res.render("map")
+})
+
+app.get("/insights", async function (req, res) {
+  res.render("insights")
+
 })
 
 let PORT = process.env.PORT || 4024;
