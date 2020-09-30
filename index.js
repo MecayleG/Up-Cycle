@@ -29,7 +29,7 @@ app.use(bodyParser.json())
 
 
 app.get("/", async function (req, res) {
-  res.render('index', {});
+  res.render('index');
 });
 
 app.post("/qtyForm", async function (req, res) {
@@ -41,36 +41,14 @@ app.post("/qtyForm", async function (req, res) {
     Metal: req.body.Metal,
     Cans: req.body.Cans
   });
+  const displayTotal = await factory.totalValue();
 
   const qtyItem = req.body.Paper;
-
-  /*    if(qtyItem){
-        await factory.materialQty(qtyItem);
-      }
-  */
-  res.redirect('/form');
-});
-
-
-app.post("/materialForm", async function (req, res) {
-
-  res.render('index', {
-
-  });
-});
-
-app.get("/total", async function (req, res) {
-  const displayTotal = await factory.totalValue();
   res.render('/form', {
     total: displayTotal
+
   });
 });
-
-app.get("/form", async function (req, res) {
-
-  res.render('form', {});
-});
-
 
 app.get("/drop-off-sites", async function (req, res) {
   res.render("map")
