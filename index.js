@@ -22,6 +22,7 @@ app.engine('handlebars', exphbs({
 app.set('view engine', 'handlebars');
 
 app.use(express.static('public'));
+app.use(express.static('images'));
 
 app.use(bodyParser.urlencoded({
     extended: false
@@ -32,6 +33,9 @@ app.use(bodyParser.json())
 app.get("/", async function(req, res) {
     res.render('index');
 });
+app.get("/drop-off-sites", async function(req, res) {
+    res.render("map")
+})
 
 let PORT = process.env.PORT || 4024;
 app.listen(PORT, function() {
