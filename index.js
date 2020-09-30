@@ -8,7 +8,7 @@ const Pool = pg.Pool;
 
 const connectionString = process.env.DATABASE_URL || 'postgresql://amirah:coder123@localhost:5432/upcycle_db';
 const pool = new Pool({
-  connectionString
+    connectionString
 });
 
 const Factory = require("./upcycle");
@@ -17,25 +17,36 @@ const factory = Factory(pool);
 let app = express();
 
 app.engine('handlebars', exphbs({
-  defaultLayout: 'main'
+    defaultLayout: 'main'
 }));
 app.set('view engine', 'handlebars');
 
 app.use(express.static('public'));
+app.use(express.static('images'));
 
 app.use(bodyParser.urlencoded({
-  extended: false
+    extended: false
 }));
 app.use(bodyParser.json())
 
 
+<<<<<<< HEAD
+app.get("/", async function(req, res) {
+    res.render('index');
+});
+app.get("/drop-off-sites", async function(req, res) {
+    res.render("map")
+})
+
+=======
 app.get("/", async function (req, res) {
     res.render('index', {
     
     });
   });
       
+>>>>>>> master
 let PORT = process.env.PORT || 4024;
-app.listen(PORT, function () {
-  console.log('App starting on port', PORT);
+app.listen(PORT, function() {
+    console.log('App starting on port', PORT);
 });
