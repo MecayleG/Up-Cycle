@@ -50,9 +50,35 @@ app.post("/qtyForm", async function (req, res) {
       await factory.materialQty(qtyItem);
     }
 */
-    res.redirect('/form');
+
+    const material = req.body.param;
+
+    const displayTotal = await factory.totalValue(material);
+
+    res.render('form', {
+     total: displayTotal
+    });
   });
 
+app.get("/table", async function (req, res) {
+    const material = req.body.param;
+
+    const displayQtyTotals = await factory.materialQty(material);
+
+    const totalPaperQty = await factory.getPaperQty(req.body.PaperQty);
+    const totalCardboardQty = await factory.getPaperQty(req.body.CardboardQty);
+    const totalGlassQty = await factory.getPaperQty(req.body.GlassQty);
+    const totalMetalQty = await factory.getPaperQty(req.body.MetalQty);
+    const totalCansQty = await factory.getPaperQty(req.body.CansQty);
+
+    res.render('table', {
+       totalPaperQty,
+       totalCardboardQty,
+       totalGlassQty,
+       totalMetalQty,
+       totalCansQty
+    });
+  });
 
 app.post("/materialForm", async function (req, res) {
 
@@ -61,12 +87,7 @@ app.post("/materialForm", async function (req, res) {
     });
   });
 
-app.get("/total", async function (req, res) {
-    const displayTotal = await factory.totalValue();
-    res.render('/form', {
-    total: displayTotal
-    });
-  });
+
 
 app.get("/form", async function (req, res) {
 
@@ -75,7 +96,7 @@ app.get("/form", async function (req, res) {
   });
 
 
-let PORT = process.env.PORT || 4024;
+let PORT = process.env.PORT || 4050;
 app.listen(PORT, function () {
   console.log('App starting on port', PORT);
 });
