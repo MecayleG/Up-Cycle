@@ -64,6 +64,7 @@ app.post("/qtyForm", async function (req, res) {
     const displayTotal = await factory.totalValue(req.body);
 
     res.render('form', {
+        material: await factory.getMaterials(),
         total: displayTotal
     });
 });
