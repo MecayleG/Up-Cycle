@@ -1,4 +1,4 @@
-const express = require("express");
+'const express = require("express");
 var exphbs = require('express-handlebars');
 var bodyParser = require('body-parser');
 
@@ -6,13 +6,13 @@ var bodyParser = require('body-parser');
 const pg = require("pg");
 const Pool = pg.Pool;
 
-const connectionString = process.env.DATABASE_URL || 'postgresql://amirah:coder123@localhost:5432/upcycle_db';
+const connectionString = process.env.DATABASE_URL || 'postgresql://amirah:codex123@localhost:5432/upcycle_db';
 const pool = new Pool({
     connectionString
 });
 
 const UpcycleFactory = require("./upcycle");
-const factory = UpcycleFactory(pool);
+const factory = UpcycleFactory();
 
 let app = express();
 
@@ -72,7 +72,7 @@ app.get("/table", async function (req, res) {
 app.get("/form", async function (req, res) {
 
     res.render('form', {
-        material : await factory.getMaterials()
+//        material : await factory.getMaterials()
     });
 });
 
@@ -102,7 +102,7 @@ app.post("/materialForm", async function (req, res) {
 
 
 
-let PORT = process.env.PORT || 4024;
+let PORT = process.env.PORT || 4040;
 app.listen(PORT, function () {
     console.log('App starting on port', PORT);
 });
