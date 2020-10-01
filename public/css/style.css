@@ -80,6 +80,14 @@ h1 {
     text-align: center;
 }
 
+.input{
+    margin:10px;
+    width: 0.5em;
+    padding:10px;
+ 
+    
+}
+
 .slides .btn:hover {
     background-color: black;
 }

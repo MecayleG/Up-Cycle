@@ -1,52 +1,20 @@
-<div>
-  <h4>Select Materials For Recycling</h4>
-</div>
-
-<div>
-  <p>Materials</p>
-</div>
-
-<form action="/materialForm" method="POST">
-  <div class="materialsRadio">
-    <label class="">
-      <input type="radio" name="materialType1" value="Paper">
-      <span class="label-body">Paper</span>
-    </label>
-    <label class="">
-      <input type="radio" name="materialType2" value="Cardboard">
-      <span class="label-body">Cardboard</span>
-    </label>
-    <label class="">
-      <input type="radio" name="materialType3" value="Glass">
-      <span class="label-body">Glass</span>
-    </label>
-    <label class="">
-      <input type="radio" name="materialType4" value="Metal">
-      <span class="label-body">Metal</span>
-    </label>
-    <label class="">
-      <input type="radio" name="materialType5" value="Cans">
-      <span class="label-body">Cans</span>
-    </label>
+<form action="/qtyForm" method="POST">
+  <div class>
+    <h4>Select Materials For Recycling</h4>
   </div>
 
-</form>
+  <div class="input">
+    <p>Materials</p>
+  </div>
 
-<div>
-  <p>Quantity</p>
-</div>
-
-<form action="/qtyForm" method="post">
   {{#each material}}
-  <div>
+  <div class="input">
     {{this.material_name}} <input type="text" name="{{this.material_name}}"
       placeholder="{{this.material_name}} weight in kg" class="qtyEntered">
   </div>
   {{/each}}
   <button class="submitBtn" type="submit">Submit Form</button>
 </form>
-
-
 <form action="/total" method="POST">
   <div>
     <p>Estimated Total R{{total}}</p>

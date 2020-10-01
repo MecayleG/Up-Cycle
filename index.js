@@ -49,30 +49,11 @@ app.get("/insights", async function (req, res) {
 
 });
 
-app.get("/table", async function (req, res) {
-    const material = req.body.param;
-
-    const displayQtyTotals = await factory.materialQty(material);
-
-    const totalPaperQty = await factory.getPaperQty(req.body.PaperQty);
-    const totalCardboardQty = await factory.getPaperQty(req.body.CardboardQty);
-    const totalGlassQty = await factory.getPaperQty(req.body.GlassQty);
-    const totalMetalQty = await factory.getPaperQty(req.body.MetalQty);
-    const totalCansQty = await factory.getPaperQty(req.body.CansQty);
-
-    res.render('table', {
-        totalPaperQty,
-        totalCardboardQty,
-        totalGlassQty,
-        totalMetalQty,
-        totalCansQty
-    });
-});
 
 app.get("/form", async function (req, res) {
 
     res.render('form', {
-        material : await factory.getMaterials()
+        material: await factory.getMaterials()
     });
 });
 
@@ -80,27 +61,12 @@ app.get("/form", async function (req, res) {
 
 app.post("/qtyForm", async function (req, res) {
 
-    factory.setQty({
-        Paper: req.body.Paper,
-        Cardboard: req.body.Cardboard,
-        Glass: req.body.Glass,
-        Metal: req.body.Metal,
-        Cans: req.body.Cans
-    });
+    const displayTotal = await factory.totalValue(req.body);
 
-    const qtyItem = req.body.Paper;
-    const material = req.body.param;
-    const displayTotal = await factory.totalValue(material);
     res.render('form', {
         total: displayTotal
     });
 });
-
-app.post("/materialForm", async function (req, res) {
-    res.render('index', {});
-});
-
-
 
 let PORT = process.env.PORT || 4024;
 app.listen(PORT, function () {
