@@ -37,8 +37,7 @@ module.exports = function UpcycleFactory(pool) {
     getQty,
     getLocations,
     getMaterials,
-    // calculatePricePerKilogram,
-    // estimatedTotal
+   
   }
 
   async function getLocations() {
@@ -54,13 +53,5 @@ module.exports = function UpcycleFactory(pool) {
     var materials = result.rows;
     return materials;
   }
-
-  // async function calculatePricePerKilogram(id, amountOfKilograms) {
-  //   //  TODO Get price for material return (amount*price)
-  // }
-
-  // async function estimatedTotal() {
-  //   //  TODO Get price for material return (amount*price)
-  // }
 
 }

@@ -27,9 +27,6 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json())
 
-
-// Get Routes
-
 app.get("/", async function (req, res) {
     res.render("index");
 });
@@ -46,9 +43,7 @@ app.get("/drop-off-sites", async function (req, res) {
 
 app.get("/insights", async function (req, res) {
     res.render("insights");
-
 });
-
 
 app.get("/form", async function (req, res) {
 
@@ -57,7 +52,6 @@ app.get("/form", async function (req, res) {
     });
 });
 
-// Post Routes
 
 app.post("/qtyForm", async function (req, res) {
 
