@@ -1,0 +1,43 @@
+<style>
+    table,
+    th,
+    td {
+        border: 1px solid black;
+    }
+</style>
+
+<h4>Tips on how to recycle<h4>
+
+        <form action="/table" method="POST">
+
+            <table>
+
+                <tr>
+                    <th>Material</th>
+                    <th>Quantity</th>
+                </tr>
+                <tr>
+                    <td>Paper</td>
+                    <td>{{totalPaperQty}}</td>
+                </tr>
+                <tr>
+                    <td>Cardboard</td>
+                    <td>{{totalCardboardQty}}</td>
+                </tr>
+                <tr>
+                    <td>Glass</td>
+                    <td>{{totalGlassQty}}</td>
+                </tr>
+                <tr>
+                    <td>Metal</td>
+                    <td>{{totalMetalQty}}</td>
+                </tr>
+                <tr>
+                    <td>Cans</td>
+                    <td>{{totalCansQty}}</td>
+                </tr>
+
+
+            </table>
+
+        </form>
