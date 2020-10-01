@@ -30,26 +30,27 @@ app.use(bodyParser.json())
 
 // Get Routes
 
-app.get("/", async function (req, res) {
+app.get("/", async function(req, res) {
     res.render("index");
 });
-app.get("/about", async function (req, res) {
+app.get("/about", async function(req, res) {
     res.render("about");
 });
-app.get("/contact", async function (req, res) {
+app.get("/contact", async function(req, res) {
     res.render("contact");
 });
 
-app.get("/drop-off-sites", async function (req, res) {
+app.get("/drop-off-sites", async function(req, res) {
+
     res.render("map");
 });
 
-app.get("/insights", async function (req, res) {
+app.get("/insights", async function(req, res) {
     res.render("insights");
 
 });
 
-app.get("/table", async function (req, res) {
+app.get("/table", async function(req, res) {
     const material = req.body.param;
 
     const displayQtyTotals = await factory.materialQty(material);
@@ -69,16 +70,16 @@ app.get("/table", async function (req, res) {
     });
 });
 
-app.get("/form", async function (req, res) {
+app.get("/form", async function(req, res) {
 
     res.render('form', {
-        material : await factory.getMaterials()
+        material: await factory.getMaterials()
     });
 });
 
 // Post Routes
 
-app.post("/qtyForm", async function (req, res) {
+app.post("/qtyForm", async function(req, res) {
 
     factory.setQty({
         Paper: req.body.Paper,
@@ -96,13 +97,13 @@ app.post("/qtyForm", async function (req, res) {
     });
 });
 
-app.post("/materialForm", async function (req, res) {
+app.post("/materialForm", async function(req, res) {
     res.render('index', {});
 });
 
 
 
 let PORT = process.env.PORT || 4024;
-app.listen(PORT, function () {
+app.listen(PORT, function() {
     console.log('App starting on port', PORT);
 });

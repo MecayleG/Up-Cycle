@@ -3,9 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
 </head>
 <body>
+         <h1 class="heading">UP-CYCLE</h1>
+        <p class="slogan">Re-use , Reduce, Recycle</p>
+
+    <button class="home"><a href="/">Home</a></button>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 5</div>
+  <img src="/images/GlobalRecyclingDay-2019.jpg" style="width:100%">
+  <div class="text">One recycled tin can saves enough energy to power a television for three hours.</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 5</div>
+  <img src="/images/bins.jpg" style="width:100%">
+  <div class="text">70% less energy is required to recycle paper compared with making it from raw materials.</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 5</div>
+  <img src="/images/cans.jpg" style="width:100%">
+  <div class="text">The unreleased energy contained in the average dustbin each year could power a television for 5,000 hours.</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">4 / 5</div>
+  <img src="/images/plastic-bottles.jpg" style="width:100%">
+  <div class="text">The unreleased energy contained in the average dustbin each year could power a television for 5,000 hours.
+  </div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">5 / 5</div>
+  <img src="/images/Recycle-World.jpg" style="width:100%">
+  <div class="text">The unreleased energy contained in the average dustbin each year could power a television for 5,000 hours.
+  </div>
+</div>
+
+
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+    <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span> 
+ 
+
+</div>
+
+<div class="how-it-helps">
+    <h1>How Recycling Helps</h1>
+    <h2>Recycling Conserves Resources</h2>
+<p> When we recycle, used materials are converted into new products, reducing the need to consume natural resources. If used materials are not recycled, new products are made by extracting fresh, raw material from the Earth, through mining and forestry. 
+Recycling helps conserve important raw materials and protects natural habitats for the future.</p>
+<h2>Recycling saves energy</h2>
+<p>Using recycled materials in the manufacturing process uses considerably less energy than that required for producing new products from raw materials – even when comparing all associated costs including transport etc. Plus there are extra energy savings because more energy is required to extract, refine, transport 
+and process raw materials ready for industry compared with providing industry-ready materials.</p>
+<h2>Recycling helps protect the environment</h2>
+<p>Recycling reduces the need for extracting (mining, quarrying and logging), refining and processing raw materials all of which create substantial air and water pollution. As recycling saves energy it also reduces greenhouse gas emissions, which helps to tackle climate change. Current UK recycling is estimated to save 
+more than 18 million tonnes of CO2 a year – the equivalent to taking 5 million cars off the road.</p>
+<h2>Recycling reduces landfill</h2>
+<p>When we recycle, recyclable materials are reprocessed into new products, and as a result the amount of 
+rubbish sent to landfill sites reduces. There are over 1,500 landfill sites in the UK, and in 2001, these sites
+ produced a quarter of the UK’s emissions of methane, a powerful greenhouse gas.</p>
+
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}</script>
+
+
+
+</div> 
     
+</div>
 </body>
 </html>
