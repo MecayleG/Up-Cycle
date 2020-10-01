@@ -5,6 +5,7 @@ create table materials
     id serial not null primary key,
     material_name text not null,
     price_per_kilogram decimal not null
+    
 );
 
 
