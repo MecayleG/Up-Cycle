@@ -51,7 +51,7 @@ module.exports = function UpcycleFactory(pool) {
     totalValue,
     getQty,
     getLocations,
-    getMaterials,
+    getMaterials
 
   }
 
