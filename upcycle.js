@@ -32,14 +32,6 @@ module.exports = function UpcycleFactory(pool) {
     return total.toFixed(2);
   }
 
-  return {
-    totalValue,
-    getQty,
-    getLocations,
-    getMaterials,
-   
-  }
-
   async function getLocations() {
     var sql_query = "select * from locations";
     var result = await pool.query(sql_query);
@@ -53,5 +45,15 @@ module.exports = function UpcycleFactory(pool) {
     var materials = result.rows;
     return materials;
   }
+
+
+  return {
+    totalValue,
+    getQty,
+    getLocations,
+    getMaterials,
+
+  }
+
 
 }
