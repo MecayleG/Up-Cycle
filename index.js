@@ -71,7 +71,9 @@ app.get("/table", async function (req, res) {
 
 app.get("/form", async function (req, res) {
 
-    res.render('form', {});
+    res.render('form', {
+        material : await factory.getMaterials()
+    });
 });
 
 // Post Routes

@@ -1,64 +1,54 @@
 <div>
-    <h4>Select Materials For Recycling</h4>
+  <h4>Select Materials For Recycling</h4>
 </div>
 
 <div>
-    <p>Materials</p>
+  <p>Materials</p>
 </div>
 
 <form action="/materialForm" method="POST">
-<div class="materialsRadio">
-        <label class="">
-            <input type="radio" name="materialType1" value="Paper">
-            <span class="label-body">Paper</span>
-          </label>
-        <label class="">
-            <input type="radio" name="materialType2" value="Cardboard">
-            <span class="label-body">Cardboard</span>
-          </label>
-        <label class="">
-            <input type="radio" name="materialType3" value="Glass">
-            <span class="label-body">Glass</span>
-          </label>
-        <label class="">
-            <input type="radio" name="materialType4" value="Metal">
-            <span class="label-body">Metal</span>
-          </label>
-        <label class="">
-            <input type="radio" name="materialType5" value="Cans">
-            <span class="label-body">Cans</span>
-          </label>
-</div>
+  <div class="materialsRadio">
+    <label class="">
+      <input type="radio" name="materialType1" value="Paper">
+      <span class="label-body">Paper</span>
+    </label>
+    <label class="">
+      <input type="radio" name="materialType2" value="Cardboard">
+      <span class="label-body">Cardboard</span>
+    </label>
+    <label class="">
+      <input type="radio" name="materialType3" value="Glass">
+      <span class="label-body">Glass</span>
+    </label>
+    <label class="">
+      <input type="radio" name="materialType4" value="Metal">
+      <span class="label-body">Metal</span>
+    </label>
+    <label class="">
+      <input type="radio" name="materialType5" value="Cans">
+      <span class="label-body">Cans</span>
+    </label>
+  </div>
 
 </form>
 
 <div>
-    <p>Quantity</p>
+  <p>Quantity</p>
 </div>
 
-<form action="/qtyForm" method="POST">
-
-<div>
-Paper <input type="text" name="Paper" placeholder="enter quantity" class="qtyEntered" value="{{qty.Paper}}">
-</div>
-<div>
-Cardboard <input type="text" name="Cardboard" placeholder="enter quantity" class="qtyEntered" value="{{qty.Cardboard}}">
-</div>
-<div>
-Glass  <input type="text" name="Glass" placeholder="enter quantity" class="qtyEntered" value="{{qty.Glass}}">
-</div>
-<div>
-Metal  <input type="text" name="Metal" placeholder="enter quantity" class="qtyEntered" value="{{qty.Metal}}">
-</div>
-<div>
-Cans _ <input type="text" name="Cans" placeholder="enter quantity" class="qtyEntered" value="{{qty.Cans}}">
-</div>
-
- <button class="submitBtn" type="submit" >Submit form</button>
+<form action="/qtyForm" method="post">
+  {{#each material}}
+  <div>
+    {{this.material_name}} <input type="text" name="{{this.material_name}}"
+      placeholder="{{this.material_name}} weight in kg" class="qtyEntered">
+  </div>
+  {{/each}}
+  <button class="submitBtn" type="submit">Submit Form</button>
 </form>
+
 
 <form action="/total" method="POST">
-<div>
+  <div>
     <p>Estimated Total R{{total}}</p>
-</div>
+  </div>
 </form>
