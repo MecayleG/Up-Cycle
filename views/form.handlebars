@@ -1,22 +1,22 @@
-<form action="/qtyForm" method="POST">
-  <div class>
-    <h4>Select Materials For Recycling</h4>
-  </div>
+<div class="one">
+  <form action="/qtyForm" method="POST">
+    <div class>
+      <h4>Select Materials For Recycling</h4>
+    </div>
 
-  <div class="input">
-    <p>Materials</p>
-  </div>
+    <div class="input">
+      <p>Materials</p>
+    </div>
 
-  {{#each material}}
-  <div class="input">
-    {{this.material_name}} <input type="text" name="{{this.material_name}}"
-      placeholder="{{this.material_name}} weight in kg" class="qtyEntered">
-  </div>
-  {{/each}}
-  <button class="submitBtn" type="submit">Submit Form</button>
-</form>
-<form action="/total" method="POST">
+    {{#each material}}
+    <div class="input">
+      {{this.material_name}} <input type="text" name="{{this.material_name}}"
+        placeholder="{{this.material_name}} is R{{this.price_per_kilogram}} per kg" class="qtyEntered">
+    </div>
+    {{/each}}
+    <button class="submitBtn" type="submit">Submit Form</button>
+  </form>
   <div>
     <p>Estimated Total R{{total}}</p>
   </div>
-</form>
+</div>

@@ -30,22 +30,26 @@ app.use(bodyParser.json())
 app.get("/", async function (req, res) {
     res.render("index");
 });
-app.get("/about", async function (req, res) {
+app.get("/about", async function(req, res) {
     res.render("about");
 });
-app.get("/contact", async function (req, res) {
+app.get("/contact", async function(req, res) {
     res.render("contact");
 });
 
-app.get("/drop-off-sites", async function (req, res) {
-    res.render("map");
+app.get("/drop-off-sites", async function(req, res) {
+    var locations = await factory.getLocations();
+    console.log(locations);
+    res.render("map",{
+        locations: locations
+    });
 });
 
-app.get("/insights", async function (req, res) {
+app.get("/insights", async function(req, res) {
     res.render("insights");
 });
 
-app.get("/form", async function (req, res) {
+app.get("/form", async function(req, res) {
 
     res.render('form', {
         material: await factory.getMaterials()
@@ -53,7 +57,7 @@ app.get("/form", async function (req, res) {
 });
 
 
-app.post("/qtyForm", async function (req, res) {
+app.post("/qtyForm", async function(req, res) {
 
     const displayTotal = await factory.totalValue(req.body);
 
@@ -64,6 +68,6 @@ app.post("/qtyForm", async function (req, res) {
 });
 
 let PORT = process.env.PORT || 4024;
-app.listen(PORT, function () {
+app.listen(PORT, function() {
     console.log('App starting on port', PORT);
 });

@@ -20,6 +20,8 @@ var marker5 = L.marker([-33.9195729, 18.4259962]).addTo(mymap);
 marker5.bindPopup("<b>L&B RECYCLING</b><br>Tide St, Woodstock, Cape Town, 7925").openPopup();
 
 var marker6 = L.marker([-34.0037386, 18.4438764]).addTo(mymap);
+// var name ="Mike";
+// var myString = `Hi my name is ${name}`;
 marker6.bindPopup("<b>Retreat Recycling And Waste Drop-off</b><br>61 10th Ave, Cafda Village, Cape Town, 7965").openPopup();
 
 var marker7 = L.marker([-33.98392, 18.5137102]).addTo(mymap);
