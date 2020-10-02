@@ -1,22 +1,69 @@
-<div class="one">
-  <form action="/qtyForm" method="POST">
-    <div class>
-      <h4>Select Materials For Recycling</h4>
-    </div>
+<h1 class="heading">UP-CYCLE</h1>
+<p class="slogan">Re-use , Reduce, Recycle</p>
 
-    <div class="input">
-      <p>Materials</p>
-    </div>
+<button class="home"><a href="/">Home</a></button>
+<br>
+<br>
+<div class="recyclables">
+  <h2>What can be recycled</h2>
+  <div class="paper">
+    <h3>Paper</h3>
+    <p>When it comes to office paper, magazines, newspaper or color paper recycling <br> there is a wide range of
+      paper materials that can be diverted from landfill.</p>
+  </div>
 
-    {{#each material}}
-    <div class="input">
-      {{this.material_name}} <input type="text" name="{{this.material_name}}"
-        placeholder="{{this.material_name}} is R{{this.price_per_kilogram}} per kg" class="qtyEntered">
-    </div>
-    {{/each}}
-    <button class="submitBtn" type="submit">Submit Form</button>
-  </form>
-  <div>
-    <p>Estimated Total R{{total}}</p>
+  <div class="cardboard">
+    <h3>Cardboard</h3>
+    <p>Be it used boxes, cereal or cardboard packaging all of these can be recycled.</p>
+  </div>
+
+  <div class="plastic">
+    <h3>Plastic</h3>
+    Plastic materials are widely recycled and include water and cool drink bottles, <br> cleaning
+    agent bottles, crates, pallets and bins, bubble wrap, yoghurt tubs, margarine tubs, <br> ice cream containers and
+    bottle caps
+  </div>
+
+  <div class="glass">
+    <h3>Glass</h3>
+    <p>Glass recycling in South Africa is on the increase. Any clean glass bottles and glass jars</p>
+  </div>
+
+  <div class="metal">
+    <h3>Metal</h3>
+    <p>Scrap metal is one of the most valuable products you can recycle. The general rule is a <br> product needs to be
+      at
+      least 50 percent metal from appliances to batteries to clothes hangers</p>
+  </div>
+
+  <div class="cans">
+    <h3>Cans</h3>
+    <p>Tin and can recycling in South Africa is one of the areas of waste management <br> that is on the increase,
+      especially in households. Any aluminium and beverage cans</p>
   </div>
 </div>
+
+<div>
+
+  <div class="one">
+    <form action="/qtyForm" method="POST">
+      <div class>
+        <h2>Select Materials For Recycling</h2>
+      </div>
+
+      <div class="input">
+        <p>Materials</p>
+      </div>
+
+      {{#each material}}
+      <div class="input">
+        {{this.material_name}} <input type="text" name="{{this.material_name}}"
+          placeholder="{{this.material_name}} is R{{this.price_per_kilogram}} per kg" class="qtyEntered">
+      </div>
+      {{/each}}
+      <button class="submitBtn" type="submit">Submit Form</button>
+    </form>
+    <div class="total">
+      <h2>Estimated Total R{{total}}</h2>
+    </div>
+  </div>

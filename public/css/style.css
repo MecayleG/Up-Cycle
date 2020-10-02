@@ -4,9 +4,19 @@
     color: #7dcea0;
 }
 
+.recyclables {
+    float: left;
+    margin-top: 1em;
+    border: solid 0.5px #7dcea0;
+    padding: 1em;
+}
+
 .one {
     width: 50%;
-    float: left;
+    float: right;
+    margin-top: 1em;
+    border: solid 0.5px #7dcea0;
+    padding: 1em;
 }
 
 .slogan {
@@ -55,6 +65,7 @@ ul {
 
 h1 {
     text-align: center;
+    color: #7dcea0;
 }
 
 .home {
@@ -62,21 +73,27 @@ h1 {
     background-color: #808080;
     border-radius: 1em;
     font-size: 1em;
-    opacity: 0.6;
+    opacity: 0.9;
+
 }
 
+.how-it-helps {
+    padding: 1em;
+}
+
+
 .home:hover {
-    background-color: #009900;
+    background-color: purple;
 }
 
 .btn a {
     text-decoration: none;
-    color: #ffffff;
+    color: #f2f2f2;
 }
 
 .home a {
     text-decoration: none;
-    color: #000000;
+    color: #f2f2f2;
 }
 
 .slogan {
@@ -119,26 +136,29 @@ h1 {
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     background-color: #808080;
-    color: #ffffff;
+    color: #000000;
     font-size: 16px;
     padding: 12px 24px;
     border: none;
     cursor: pointer;
     border-radius: 5px;
     text-align: center;
-    opacity: 0.6;
+    opacity: 0.9;
 }
 
 .input {
     margin: 10px;
     width: 0.5em;
     padding: 10px;
+    font-weight: bold;
 
 
 }
 
+.total {}
+
 .slides .btn:hover {
-    background-color: #009900;
+    background-color: purple;
 }
 
 .contact {
@@ -226,6 +246,9 @@ h1 {
 
 .mySlides {
     display: none;
+}
+.mySlides img {
+    opacity: 0.5;
 }
 
 img {
