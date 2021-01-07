@@ -10,14 +10,18 @@
     <h1 class="heading">UP-CYCLE</h1>
     <p class="slogan">Re-use , Reduce, Recycle</p>
 
-    <button class="home"><a href="/">Home</a></button>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                </ul>
+            </nav>
     <div id="mapid"></div>
 </body>
 
-<input type="hidden" id="locations" name="locations" value="{{locations}}">
+<input type="hidden" id="location" name="locations">
 <script>
 
-    var locations = document.getElementById('locations').value;
+    var locations = document.getElementById('location').value;
     
     var mymap = L.map('mapid').setView([-33.9524484, 18.5309409, 9.88], 10);
     L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=hBayp6753sAz4cE22Fvu', {

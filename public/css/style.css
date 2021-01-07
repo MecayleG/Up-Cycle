@@ -25,11 +25,11 @@
 }
 
 nav {
-    position: absolute;
-    top: 0;
+    /* position: absolute; */
+    /* top: 0;
     right: 0;
     left: 0;
-    z-index: 2;
+    z-index: 2; */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -41,8 +41,7 @@ nav {
 nav li {
     display: inline-block;
     padding: 1em;
-    /* padding-right: 10px;
-    padding-left: 10px; */
+    /* margin-top: 2em; */
     border: 1px solid #7dcea0;
     border-radius: 1em;
     background-color: #7dcea0;
@@ -74,13 +73,11 @@ h1 {
     border-radius: 1em;
     font-size: 1em;
     opacity: 0.9;
-
 }
 
 .how-it-helps {
     padding: 1em;
 }
-
 
 .home:hover {
     background-color: purple;
@@ -151,8 +148,6 @@ h1 {
     width: 0.5em;
     padding: 10px;
     font-weight: bold;
-
-
 }
 
 .total {}
@@ -247,6 +242,7 @@ h1 {
 .mySlides {
     display: none;
 }
+
 .mySlides img {
     opacity: 0.5;
 }
@@ -357,7 +353,6 @@ img {
     from {
         opacity: .4
     }
-
     to {
         opacity: 1
     }
@@ -367,7 +362,6 @@ img {
     from {
         opacity: .4
     }
-
     to {
         opacity: 1
     }
@@ -377,7 +371,6 @@ img {
 /* On smaller screens, decrease text size */
 
 @media only screen and (max-width: 300px) {
-
     .prev,
     .next,
     .text {
