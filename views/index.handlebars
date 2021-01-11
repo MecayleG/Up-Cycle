@@ -4,40 +4,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Up-Cycle</title>
 </head>
 
 <body>
-    <div class="container">
-        <div class="header">
-            <form action="/home" method="POST"></form>
-            <nav>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/contact">Contact Us</a></li>
-                </ul>
-            </nav>
-            <h1 class="heading">UP-CYCLE</h1>
-            <p class="slogan">Re-use , Reduce, Recycle</p>
+        <nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <h3>Up-Cycle</h3>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contact">Get in Touch</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="card text-center intro">
+            <div class="card-body">
+                <p class="card-text">If you’re not already recycling, find out more about how easy it is and how you can
+                    really make a
+                    difference. For those who already recycle, discover the positive effect your recycling efforts are
+                    making and find out what else you may be able to do.</p>
+            </div>
         </div>
-        <div class="about">If you’re not already recycling, find out more about how easy it is and how you can really make a 
-            difference. For those who already recycle, discover the positive effect your recycling efforts are making and find out what else you may be able to do.</div>
-
-        <div class="slides">
-            <img src="/images/recycle1.jpg" alt="what can be recycled">
-            <button class="btn" name="link"><a href="/form">what can I recycle and how much can i get?</a></button>
+      
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card h-100">
+                    <img src="/images/all.jpg" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <a href="/form" class="btn btn-success">What can I recycle and for how much?</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="/images/map.jpg" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <a href="/drop-off-sites" class="btn btn-success">Drop-off Points</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="/images/earth.jpg" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <a href="/insights" class="btn btn-success ">Tips on how to recycle and how it helps</a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="slides">
-            <img src="/images/map.jpg" alt="map of cape town">
-            <button class="btn" name="link"><a href="/drop-off-sites">Drop-off Points</a></button>
-        </div>
-
-        <div class="slides">
-            <img src="/images/recycle2.jpg" alt="how recycling helps">
-            <button class="btn" name="link"><a href="/insights">Tips on how to recycle and how it helps</a></button>
-        </div>
-
 </body>
 
 </html>
