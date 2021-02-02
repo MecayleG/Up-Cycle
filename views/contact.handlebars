@@ -35,17 +35,26 @@
   <div class="card-body text-center">
     <h3 class="card-title">We would love to hear from you!</h3>
     <h5 class="card-subtitle mb-2 text-muted">Whether you have any questions, a suggestion or simply want to know more? We are here to help</h5>
-<form action="mailto:mecayleg@gmail.com" method="post" enctype="text/plain" class="form">
-Your Name:<br>
-<input type="text" name="name"><br>
-Your E-mail:<br>
-<input type="text" name="mail"><br>
-Your Message:<br>
-<input type="text" name="comment" size="40"><br><br>
-<input type="submit" value="Send" class="sub btn-success">
-<input type="reset" value="Reset" class="sub btn-success">
-</form>
-  </div>
+<form class="form-style-9" action="https://formspree.io/f/meqpnble" method="POST">
+<ul>
+<li>
+    <input type="text" name="field1" class="field-style field-split align-left" placeholder="Name" required/>
+    <input type="email" name="field2" class="field-style field-split align-right" placeholder="Email" required />
+
+</li>
+<li>
+    <input type="text" name="field3" class="field-style field-split align-left" placeholder="Phone" />
+    <input type="url" name="field4" class="field-style field-split align-right" placeholder="Website" />
+</li>
+<li>
+<textarea name="field5" class="field-style" placeholder="Message" required></textarea>
+</li>
+<li>
+<input type="submit" class="btn btn-success" value="Send Message" />
+</li>
+</ul>
+</form>  
+</div>
 </div>
     {{!-- <div clas="contact">
 <div class="center">
